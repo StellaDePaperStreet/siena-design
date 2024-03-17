@@ -7,6 +7,7 @@ module.exports = {
         beige: "#ede7e3",
         corail: "#b58a81",
         brunclair: "#c8aaa2",
+        brunsemiclair: "#e0d1c8",
         brunsable: "#eee6de",
         bruntresclair: "#e8e4db",
         rougeterre: "#975143",
@@ -17,6 +18,9 @@ module.exports = {
         marronbouton: "#7d534a",
         brique: "#8f4d3f",
         marronrouge: "#4f160c",
+        marrondot: "#c4866f",
+        rouge: "#992600",
+        rougefonce: "#6f4036",
       },
       fontFamily: {
         sans: [""],
