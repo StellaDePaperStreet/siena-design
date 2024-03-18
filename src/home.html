@@ -9,6 +9,13 @@
     />
     <link rel="stylesheet" href="output.css" />
     <title>Siena-Design | Accueil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: black; }
+      }
+    </style>
   </head>
   <body class="bg-black">
     <div
@@ -68,7 +75,11 @@
                 DESIGNER
               </h2>
               <div id="text-animé text-center text-white mt-20">
-                ANIMATION A FAIRE
+                <div class="typewriter flex flex-row">
+                  <span class="great-vibes-regular text-4xl text-marron">Avec&nbsp;</span>
+                  <h1 id="text" class="great-vibes-regular text-4xl text-marron"></h1>
+                </div>
+                
               </div>
               <div class="mt-20">
                 <h3
@@ -95,7 +106,7 @@
           </div>
           <div class="flex flex-row px-72 h-fit mt-32 gap-20">
             <div
-              class="bg-bruntresclair w-1/2 flex flex-col items-center gap-8 rounded-md"
+              class="bg-bruntresclair w-1/2 flex flex-col items-center gap-8 rounded-md px-10"
             >
               <div class="max-w-[64px] min-h-[64px] mt-12">
                 <img
@@ -119,8 +130,8 @@
               <h4 class="text-marronfonce cormorant-garamond-bold text-2xl">
                 FAIRE EQUIPE
               </h4>
-              <div class="leading-8 text-lg max-w-lg mb-12">
-                Quelque soit le projet, notre objectif est de faire équipe avec
+              <div class="leading-8 text-lg max-w-lg mb-12 text-justify">
+                Quel que soit le projet, notre objectif est de faire équipe avec
                 vous pour designer la meilleure solution créative. Un projet
                 personnalisé qui correspond aux valeurs et à l’histoire de votre
                 entreprise. Vos parcours nous animent et nous inspirent au
@@ -128,7 +139,7 @@
               </div>
             </div>
             <div
-              class="bg-bruntresclair w-1/2 flex flex-col items-center gap-8 rounded-md"
+              class="bg-bruntresclair w-1/2 flex flex-col items-center gap-8 rounded-md px-10"
             >
               <div class="max-w-[64px] max-h-[64px] mt-12">
                 <img
@@ -150,7 +161,7 @@
               <h4 class="text-marronfonce cormorant-garamond-bold text-2xl">
                 FAIRE SENS
               </h4>
-              <div class="leading-8 text-lg max-w-lg mb-12">
+              <div class="leading-8 text-lg max-w-lg mb-12 text-justify">
                 Notre approche de la création graphique privilégie le faire
                 sens. Nous ne faisons pas que dans l’esthétique. Nos créations
                 portent des valeurs et une histoire unique, la vôtre. Nous
@@ -240,10 +251,10 @@
     </section>
     <section
       id="process-creatif"
-      class="bg-brunsable w-full flex flex-row max-h-[545px] h-fit"
+      class="bg-brunsable w-full flex flex-row min-h-[545px] h-fit"
     >
-      <div class="w-1/2 flex flex-col px-72 py-20 gap-16">
-        <h3 class="text-6xl cormorant-garamond-bold text-marronfonce">
+      <div class="w-1/2 flex flex-col px-72 py-20 gap-16 h-fit">
+        <h3 class="text-5xl cormorant-garamond-bold text-marronfonce">
           PROCESSUS CRÉATIF
         </h3>
         <p class="text-marronfonce text-xl text-justify max-w-2xl leading-8">
@@ -402,7 +413,7 @@
                   x-text="slide.title"
                 ></h2>
                 <p
-                  class="text-marronrouge text-left text-xl"
+                  class="text-marronrouge text-left text-xl libre-baskerville-regular-italic"
                   x-text="slide.text"
                 ></p>
                 <span
@@ -576,5 +587,39 @@
       FREELANCE A ANNECY, HAUTE-SAVOIE FRANCE
     </section>
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script>
+      const phrases = ["créativité", "sens", "goût", "vous !"];
+      let currentPhrase = 0;
+      let currentChar = 0;
+      const textElement = document.getElementById('text');
+      const typingSpeed = 100;
+      const deletingSpeed = 50;
+      const pauseBetweenPhrases = 1000;
+    
+      function typePhrase() {
+        if (currentChar < phrases[currentPhrase].length) {
+          textElement.textContent += phrases[currentPhrase].charAt(currentChar);
+          currentChar++;
+          setTimeout(typePhrase, typingSpeed);
+        } else {
+          setTimeout(deletePhrase, pauseBetweenPhrases);
+        }
+      }
+    
+      function deletePhrase() {
+        if (currentChar > 0) {
+          textElement.textContent = phrases[currentPhrase].substring(0, currentChar - 1);
+          currentChar--;
+          setTimeout(deletePhrase, deletingSpeed);
+        } else {
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+          setTimeout(typePhrase, typingSpeed);
+        }
+      }
+    
+      setTimeout(typePhrase, typingSpeed);
+    
+      textElement.style.animation = "blink-caret 1s step-end infinite";
+    </script>
   </body>
 </html>

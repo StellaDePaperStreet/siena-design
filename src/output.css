@@ -646,10 +646,6 @@ video {
   margin-top: 138px;
 }
 
-.mt-48 {
-  margin-top: 12rem;
-}
-
 .block {
   display: block;
 }
@@ -701,6 +697,10 @@ video {
 
 .min-h-\[64px\] {
   min-height: 64px;
+}
+
+.min-h-\[545px\] {
+  min-height: 545px;
 }
 
 .w-1\/2 {
@@ -1019,6 +1019,11 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pb-10 {
