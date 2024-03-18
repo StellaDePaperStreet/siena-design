@@ -1,0 +1,22 @@
+!!! RESPONSIVE !!!
+
+. fondu à l'ouverture
+. hover navbar
+. bouton scroll down sur l'écran d'accueil
+. bouton scroll up persistant
+. amelioration du carrousel d'avis clients
+    . Fleches à centrer et animer
+    . marqueur de card ne fonctionne pas
+. animation des images de bas de pages (apparaissent de la droite vers la gauche)
+
+. animation boutons :
+    . Découvrez notre studio
+    . En savoir plus sur nos services
+    . Déroulé du processus créatif
+    . Les réalisations du studio
+    . nos retours clients
+    . lire tous nos avis
+    . demander un devis
+
+
+
