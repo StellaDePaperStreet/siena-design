@@ -108,3 +108,34 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.gentium-book-plus-regular {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gentium-book-plus-bold {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gentium-book-plus-regular-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gentium-book-plus-bold-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (min-width: 1024px) {
+  /* 1024px est la valeur par défaut pour le breakpoint lg dans TailwindCSS v2.x */
+  .bg-custom-lg {
+    background-image: url(./img/Bureau-studio-de-graphisme-siena-design.webp);
+  }
+}
